@@ -1,0 +1,134 @@
+:root{
+  --primaryColor:rgba(15, 8, 163, 0.733);
+  --secondaryColor:rgba(0,212,255,1) ;
+
+}
+body{
+
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, var(--primaryColor) 0%,var(--secondaryColor) 100%);
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+
+.todoContainer
+{
+max-width: 700px;
+width:100%;
+background-color: white;
+min-height: 300px;
+padding: 30px;
+}
+
+.input
+{
+margin:30px 0;
+& form{
+  display: flex;
+  justify-content: space-between;
+  & input
+  {
+    padding: 20px;
+    width:100%;
+
+    border:2px solid var(--primaryColor);
+    outline: none;
+&:hover
+{
+  border-color:var(--secondaryColor);
+
+}
+&:focus
+{
+  border-color: pink;
+
+}
+
+  }
+}
+}
+& button{
+  background-color: var(--secondaryColor);
+  color:white;
+  
+  border: none;
+  cursor: pointer;
+  justify-content:center;
+align-items:center;
+}
+.deleteBtn{
+
+  justify-content:center;
+  align-items:center;
+  padding-bottom: 16px;
+  
+
+  text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 5px;
+  
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      color: #fff;
+      background-color: #3498db;
+      border: 1px #2980b9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.deleteBtn:hover {
+  background-color: #2980b9;
+  color: #fff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.heading
+{
+  & h1{
+    background:-webkit-linear-gradient(
+    var(--primaryColor),
+    var(--secondaryColor));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.list{
+  padding-left: 30px;
+
+ 
+  & ul{
+    list-style: none;
+    justify-content: center;
+   
+    & li {
+     
+      position: relative;
+
+      padding: 20px 0;
+      &::before {
+      content: "\f5ad";
+      top: 50%;
+      transform: translateY(-50%);
+      left: -35px;  
+      color: var(--secondaryColor);
+      font-size: 30px;
+      z-index: 999;
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      position: absolute;
+      }
+     
+      & p
+      {
+        font-size: 20px;
+        color:rgb(114, 114, 114);
+        
+      }
+    }
+  }
+}
