@@ -55,7 +55,7 @@ function addTaskToList(taskText) {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.innerHTML =
-    "Delete </script> <lord-icon src='https://cdn.lordicon.com/skkahier.json' trigger='hover'  style='width:30px;height:30px;padding-top: 7px; '> </lord-icon>";
+    "</script> <lord-icon src='https://cdn.lordicon.com/skkahier.json' trigger='hover'  style='width:30px;height:30px;padding-top: 7px; '> </lord-icon>";
   deleteBtn.classList.add("deleteBtn");
   deleteBtn.addEventListener("click", function () {
     const index = tasks.indexOf(taskText);
